@@ -7,7 +7,15 @@ using namespace std;
 int main()
 {
     // Declaring a vector
-    vector<int> numbers{1, 2, 3, 4, 5, 6};
+    vector<int> numbers{3, 2, 20, 4, 9, 6};
+
+    // Declaring iterator to print the first elemnet of the vector
+    vector<int>::iterator it = numbers.begin();
+    cout << "First Element: " << *it << endl;
+
+    // change iterator to point to the last element
+    it = numbers.end() - 1;
+    cout << "Last Element: " << *it << endl;
 
     // Printing the vector
     for (int number : numbers)
