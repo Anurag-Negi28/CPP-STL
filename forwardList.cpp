@@ -32,4 +32,39 @@ int main()
     {
         cout << num << " ";
     }
+    // Removing the first elemenst
+    numbers.pop_front();
+    // Printing the list
+    cout << "\nUpdated Forward List : ";
+    for (int num : numbers)
+    {
+        cout << num << " ";
+    }
+    // Removing the element after 3rd position
+    itr = numbers.begin();
+    advance(itr, 2);
+    numbers.erase_after(itr);
+    // Printing the list
+    cout << "\nUpdated Forward List : ";
+    for (int num : numbers)
+    {
+        cout << num << " ";
+    }
+    // Removing all the occurences of 3
+    numbers.remove(3);
+    // Printing the list
+    cout << "\nUpdated Forward List : ";
+    for (int num : numbers)
+    {
+        cout << num << " ";
+    }
+    // Removing all the elements from the list
+    numbers.clear();
+    // Checking the list is empty or not
+    if (numbers.empty())
+        cout << "\nThe list is empty";
+    else
+        cout << "\nThe list is not empty";
+
+    return 0;
 }
